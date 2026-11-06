@@ -498,7 +498,17 @@
     const langSel = $('#lang');
     for (const [k, v] of Object.entries(I18N.LANGS)) langSel.appendChild(new Option(v.name, k));
     langSel.value = I18N.lang;
-    langSel.addEventListener('change', () => { I18N.setLang(langSel.value); fillSelects(); fillPresets(); writeInputs(); render(); renderConverter(); });
+    langSel.addEventListener('change', () => {
+      const l = langSel.value;
+      // Each language has its own page (/, /de/, /nl/, …); keep the design in the hash.
+      const page = document.documentElement.dataset.page;
+      if (page) {
+        try { localStorage.setItem('vacuum.lang', l); } catch (e) { /* storage unavailable */ }
+        location.href = (page === 'en' ? '' : '../') + (l === 'en' ? '' : l + '/') + location.hash;
+        return;
+      }
+      I18N.setLang(l); fillSelects(); fillPresets(); writeInputs(); render(); renderConverter();
+    });
 
     $('#units').addEventListener('click', (e) => {
       const b = e.target.closest('button[role="radio"]');

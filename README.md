@@ -68,6 +68,12 @@ Tests check the physics against the book's worked examples and exercises. They a
 node tests/physics.test.js
 ```
 
+Each language has its own page (`/`, `/de/`, `/nl/`, `/tr/`, `/es/`) so search engines can index the translations. `index.html` is the template. After changing it or the translations, regenerate the language pages, the SEO tags (title, description, canonical, hreflang, Open Graph, JSON-LD) and `sitemap.xml`:
+
+```bash
+node tools/build-pages.js
+```
+
 ## License
 
 MIT © 2026 Eren Tozlu. More tools at [ehcrea.com](https://ehcrea.com).

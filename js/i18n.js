@@ -823,6 +823,24 @@
     },
   };
 
+  // Page title and description per language (search results, link previews).
+  const META = {
+    title: {
+      en: 'Vacuum Chamber Calculator: pump-down time, gas load and conductance',
+      de: 'Vakuumkammer-Rechner: Auspumpzeit, Gaslast und Leitwert',
+      nl: 'Vacuümkamer-calculator: afpomptijd, gaslast en geleiding',
+      tr: 'Vakum Haznesi Hesaplayıcısı: vakuma alma süresi, gaz yükü ve iletkenlik',
+      es: 'Calculadora de cámaras de vacío: tiempo de evacuación, carga de gas y conductancia',
+    },
+    description: {
+      en: 'Free online vacuum chamber calculator: gas load from outgassing, permeation and leaks, conductance of pumping lines, effective pumping speed, pump-down time, pump selection and wall thickness. Metric or US units, PDF report.',
+      de: 'Kostenloser Online-Rechner für Vakuumkammern: Gaslast durch Ausgasung, Permeation und Lecks, Leitwert der Pumpleitungen, effektives Saugvermögen, Auspumpzeit, Pumpenauswahl und Wanddicke. Metrische oder US-Einheiten, PDF-Bericht.',
+      nl: 'Gratis online calculator voor vacuümkamers: gaslast door ontgassing, permeatie en lekken, geleiding van pompleidingen, effectieve pompsnelheid, afpomptijd, pompkeuze en wanddikte. Metrische of Amerikaanse eenheden, PDF-rapport.',
+      tr: 'Ücretsiz çevrim içi vakum haznesi hesaplayıcısı: gaz salımı, permeasyon ve kaçaklardan kaynaklanan gaz yükü, pompalama hatlarının iletkenliği, etkin pompalama hızı, vakuma alma süresi, pompa seçimi ve cidar kalınlığı. Metrik veya ABD birimleri, PDF rapor.',
+      es: 'Calculadora gratuita en línea de cámaras de vacío: carga de gas por desgasificación, permeación y fugas, conductancia de las líneas de bombeo, velocidad de bombeo efectiva, tiempo de evacuación, selección de bombas y espesor de pared. Unidades métricas o de EE. UU., informe PDF.',
+    },
+  };
+
   const DICT = { de: {}, nl: {}, tr: {}, es: {} };
   for (const [en, de, nl, tr, es] of ROWS) { DICT.de[en] = de; DICT.nl[en] = nl; DICT.tr[en] = tr; DICT.es[en] = es; }
 
@@ -869,7 +887,7 @@
       if (block) el.innerHTML = block[lang] || block.en; // trusted static content defined above
     }
     document.documentElement.lang = lang;
-    document.title = t('Vacuum Chamber Calculator');
+    document.title = META.title[lang];
   }
 
   const I18N = {
@@ -882,7 +900,9 @@
       let saved = null;
       try { saved = localStorage.getItem(STORE_KEY); } catch (e) { /* storage unavailable */ }
       const nav = (typeof navigator !== 'undefined' && navigator.language || 'en').slice(0, 2).toLowerCase();
-      lang = LANGS[saved] ? saved : LANGS[nav] ? nav : 'en';
+      // A language page (/de/, /nl/, …) always shows its own language.
+      const page = typeof document !== 'undefined' && document.documentElement.dataset.page;
+      lang = LANGS[page] ? page : LANGS[saved] ? saved : LANGS[nav] ? nav : 'en';
       applyStatic();
     },
     setLang(l) {
@@ -897,6 +917,8 @@
     keys: () => ROWS.map((r) => r[0]),
     rows: () => ROWS,
     html: () => HTML,
+    meta: () => META,
+    dict: () => DICT,
   };
 
   if (typeof module !== 'undefined' && module.exports) module.exports = I18N;
