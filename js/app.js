@@ -451,7 +451,16 @@
     const sel = $('#preset');
     sel.textContent = '';
     sel.appendChild(new Option(t('Load application example…'), ''));
-    for (const p of Presets.PRESETS) sel.appendChild(new Option(t(p.name), p.id));
+    for (const g of Presets.GROUPS) {
+      const og = document.createElement('optgroup');
+      og.label = t(g.name);
+      for (const p of Presets.PRESETS.filter((x) => x.group === g.id)) {
+        const o = new Option(t(p.name), p.id);
+        if (p.note) o.title = t(p.note);
+        og.appendChild(o);
+      }
+      sel.appendChild(og);
+    }
   }
 
   function applyPreset(id) {
@@ -461,7 +470,7 @@
     fillSelects();
     writeInputs();
     render();
-    toast(t('Loaded example: {name}', { name: t(p.name) }));
+    toast(t('Loaded example: {name}', { name: t(p.name) }) + (p.note ? ' — ' + t(p.note) : ''));
   }
 
   // ---------- Toolbar, dialogs ----------

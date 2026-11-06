@@ -87,10 +87,11 @@ check('Clamped circular plate σ = 3qa²/4t²', P.circPlate(0.4, 0.02, 1e5, ss, 
 check('Simply supported square plate β = 0.2874', P.rectPlate(1, 1, 0.01, 1e5, ss, 'simple').sigma, 0.2874 * 1e5 / 1e-4, 1e-6);
 truthy('Long-cylinder buckling is the lower bound', P.shellBuckling(0.4, 100, 0.002, ss) >= 2 * ss.E / (1 - ss.nu ** 2) * (0.002 / 0.4) ** 3 * 0.999);
 
-// Presets run and produce finite results
+// Presets run, belong to a menu group and pass their own design checks
 for (const p of Pr.PRESETS) {
   const r = P.analyze(p.state);
   truthy(`preset ${p.id}: finite pressure ${P.fmtSci(r.pEval)} Pa`, isFinite(r.pEval) && r.pEval > 0);
+  truthy(`preset ${p.id}: in a menu group, no design errors`, Pr.GROUPS.some((g) => g.id === p.group) && r.ok);
 }
 
 // Translations: every UI string has 5 languages
@@ -113,7 +114,7 @@ try {
     for (const m of src.matchAll(/\bt\(\s*'((?:[^'\\]|\\.)*)'/g)) keys.add(m[1].replace(/\\'/g, "'"));
     for (const m of src.matchAll(/add\('\w+', '((?:[^'\\]|\\.)*)'/g)) keys.add(m[1]);
   }
-  for (const list of [Data.GASES, Data.OUTGASSING, Data.SEALS, Data.ROUGH_PUMPS, Data.HV_PUMPS, Data.STRUCT, Data.RANGES, Pr.PRESETS]) for (const x of list) { keys.add(x.name); if (x.note) keys.add(x.note); }
+  for (const list of [Data.GASES, Data.OUTGASSING, Data.SEALS, Data.ROUGH_PUMPS, Data.HV_PUMPS, Data.STRUCT, Data.RANGES, Pr.PRESETS, Pr.GROUPS]) for (const x of list) { keys.add(x.name); if (x.note) keys.add(x.note); }
   const notDict = [...keys].filter((k) => !I.has(k));
   truthy(`i18n: all ${keys.size} source strings in the dictionary (${notDict.length} missing)`, notDict.length === 0);
   if (notDict.length) console.log(notDict);
