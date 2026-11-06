@@ -577,6 +577,20 @@
 <li><b>Pumping lines</b> lists every element; the limiting element is highlighted. <b>Pump selection</b> marks the pump types that suit the target; click a row to use one.</li>
 <li><b>Step-by-step calculation</b> writes out all formulas with their equation numbers. <b>Copy link</b> saves the design in a link; <b>PDF report</b> creates a printable report.</li>
 </ul>
+<h3>Free reading for students</h3>
+<p>All sources below are free to read online (in English) and are listed roughly from introductory to advanced.</p>
+<ul class="reading">
+<li><a href="https://www.leybold.com/en-us/knowledge/vacuum-fundamentals" target="_blank" rel="noopener">Leybold – Fundamentals of Vacuum Technology</a>: an introduction from gas physics to pumps, gauges and leak detection; also available as a free e-book.</li>
+<li><a href="https://www.pfeiffervacuum.com/global/en/knowledge/vacuum-technology" target="_blank" rel="noopener">Pfeiffer Vacuum – The Vacuum Technology Book</a>: basic calculations (pressure, gas flow, conductance, pump-down time), components, pumps and measurement.</li>
+<li><a href="https://arxiv.org/abs/2006.01464" target="_blank" rel="noopener">E. Al-Dmour – Fundamentals of Vacuum Physics and Technology</a>: CERN Accelerator School lecture (2020): kinetic gas theory, gas flow and the main gas sources in a compact form.</li>
+<li><a href="https://arxiv.org/abs/1404.0960" target="_blank" rel="noopener">P. Chiggiato – Vacuum Technology for Ion Sources</a>: CERN Accelerator School lecture (2014): flow regimes, conductances, pump selection and an electrical analogy for pump-down.</li>
+<li><a href="https://arxiv.org/abs/2105.07675" target="_blank" rel="noopener">M. Seidel – Accelerator Vacuum</a>: CERN Accelerator School lecture (2021): pressure profiles along long tubes – why many systems are limited by conductance.</li>
+<li><a href="https://arxiv.org/abs/2006.07124" target="_blank" rel="noopener">P. Chiggiato – Outgassing Properties of Vacuum Materials for Particle Accelerators</a>: CERN Accelerator School lecture (2020): why surfaces release gas, the role of water vapour and bakeout, material choice; background to the 1/t law.</li>
+<li><a href="https://arxiv.org/abs/2006.01574" target="_blank" rel="noopener">V. Baglin – Cryopumping and Vacuum Systems</a>: CERN Accelerator School lecture (2020): capture and cryopumps, applied to a large real system (LHC).</li>
+<li><a href="https://ntrs.nasa.gov/citations/20205011530" target="_blank" rel="noopener">NASA SP-8007 – Buckling of Thin-Walled Circular Cylinders (2020)</a>: NASA design guideline on shell buckling and knock-down factors; background to the wall-strength check.</li>
+<li>Short definitions on Wikipedia: <a href="https://en.wikipedia.org/wiki/Vacuum" target="_blank" rel="noopener">Vacuum</a>, <a href="https://en.wikipedia.org/wiki/Mean_free_path" target="_blank" rel="noopener">Mean free path</a>, <a href="https://en.wikipedia.org/wiki/Knudsen_number" target="_blank" rel="noopener">Knudsen number</a>, <a href="https://en.wikipedia.org/wiki/Free_molecular_flow" target="_blank" rel="noopener">Free molecular flow</a>, <a href="https://en.wikipedia.org/wiki/Outgassing" target="_blank" rel="noopener">Outgassing</a>, <a href="https://en.wikipedia.org/wiki/Vacuum_pump" target="_blank" rel="noopener">Vacuum pump</a>, <a href="https://en.wikipedia.org/wiki/Ultra-high_vacuum" target="_blank" rel="noopener">Ultra-high vacuum</a>.</li>
+</ul>
+<p class="about-meta">Links lead to external websites; their content is the responsibility of their authors.</p>
 <p class="about-meta">Pressures can be shown in Pa, mbar or Torr; throughput and outgassing follow that choice.</p>`,
       de: `<h2 id="help-title">So verwenden Sie den Vakuumkammer-Rechner</h2>
 <p>Neu hier? Wählen Sie in der Werkzeugleiste unter <b>Anwendungsbeispiel laden…</b> ein Beispiel, ändern Sie dann einen Wert nach dem anderen und beobachten Sie die Auspumpkurve.</p>
@@ -604,6 +618,20 @@
 <li><b>Pumpleitungen</b> listet jedes Element; das begrenzende ist hervorgehoben. <b>Pumpenauswahl</b> markiert die passenden Pumpentypen; ein Klick auf eine Zeile übernimmt sie.</li>
 <li><b>Schritt-für-Schritt-Berechnung</b> zeigt alle Formeln mit Gleichungsnummern. <b>Link kopieren</b> speichert die Auslegung in einem Link; <b>PDF-Bericht</b> erstellt einen druckbaren Bericht.</li>
 </ul>
+<h3>Kostenlose Lektüre für Studierende</h3>
+<p>Alle folgenden Quellen sind online frei lesbar (auf Englisch) und grob von einführend bis vertiefend geordnet.</p>
+<ul class="reading">
+<li><a href="https://www.leybold.com/en-us/knowledge/vacuum-fundamentals" target="_blank" rel="noopener">Leybold – Fundamentals of Vacuum Technology</a>: Einführung von der Gasphysik über Pumpen und Messgeräte bis zur Lecksuche; auch als kostenloses E-Book erhältlich.</li>
+<li><a href="https://www.pfeiffervacuum.com/global/en/knowledge/vacuum-technology" target="_blank" rel="noopener">Pfeiffer Vacuum – The Vacuum Technology Book</a>: Grundlegende Berechnungen (Druck, Gasströmung, Leitwert, Auspumpzeit), Komponenten, Pumpen und Messtechnik.</li>
+<li><a href="https://arxiv.org/abs/2006.01464" target="_blank" rel="noopener">E. Al-Dmour – Fundamentals of Vacuum Physics and Technology</a>: Vorlesung der CERN Accelerator School (2020): kinetische Gastheorie, Gasströmung und die wichtigsten Gasquellen in kompakter Form.</li>
+<li><a href="https://arxiv.org/abs/1404.0960" target="_blank" rel="noopener">P. Chiggiato – Vacuum Technology for Ion Sources</a>: Vorlesung der CERN Accelerator School (2014): Strömungsbereiche, Leitwerte, Pumpenauswahl und eine elektrische Analogie für das Auspumpen.</li>
+<li><a href="https://arxiv.org/abs/2105.07675" target="_blank" rel="noopener">M. Seidel – Accelerator Vacuum</a>: Vorlesung der CERN Accelerator School (2021): Druckprofile entlang langer Rohre – warum viele Systeme leitwertbegrenzt sind.</li>
+<li><a href="https://arxiv.org/abs/2006.07124" target="_blank" rel="noopener">P. Chiggiato – Outgassing Properties of Vacuum Materials for Particle Accelerators</a>: Vorlesung der CERN Accelerator School (2020): warum Oberflächen Gas abgeben, die Rolle von Wasserdampf und Ausheizen, Werkstoffwahl; Hintergrund zum 1/t-Gesetz.</li>
+<li><a href="https://arxiv.org/abs/2006.01574" target="_blank" rel="noopener">V. Baglin – Cryopumping and Vacuum Systems</a>: Vorlesung der CERN Accelerator School (2020): Getter- und Kryopumpen, angewandt auf ein großes reales System (LHC).</li>
+<li><a href="https://ntrs.nasa.gov/citations/20205011530" target="_blank" rel="noopener">NASA SP-8007 – Buckling of Thin-Walled Circular Cylinders (2020)</a>: NASA-Auslegungsrichtlinie zum Schalenbeulen und zu Abminderungsfaktoren; Hintergrund zur Wandfestigkeitsprüfung.</li>
+<li>Kurze Definitionen auf Wikipedia: <a href="https://en.wikipedia.org/wiki/Vacuum" target="_blank" rel="noopener">Vacuum</a>, <a href="https://en.wikipedia.org/wiki/Mean_free_path" target="_blank" rel="noopener">Mean free path</a>, <a href="https://en.wikipedia.org/wiki/Knudsen_number" target="_blank" rel="noopener">Knudsen number</a>, <a href="https://en.wikipedia.org/wiki/Free_molecular_flow" target="_blank" rel="noopener">Free molecular flow</a>, <a href="https://en.wikipedia.org/wiki/Outgassing" target="_blank" rel="noopener">Outgassing</a>, <a href="https://en.wikipedia.org/wiki/Vacuum_pump" target="_blank" rel="noopener">Vacuum pump</a>, <a href="https://en.wikipedia.org/wiki/Ultra-high_vacuum" target="_blank" rel="noopener">Ultra-high vacuum</a>.</li>
+</ul>
+<p class="about-meta">Die Links führen zu externen Websites; für deren Inhalt sind die jeweiligen Autoren verantwortlich.</p>
 <p class="about-meta">Drücke lassen sich in Pa, mbar oder Torr anzeigen; Durchfluss und Ausgasung folgen dieser Wahl.</p>`,
       nl: `<h2 id="help-title">Hoe u de vacuümkamer-calculator gebruikt</h2>
 <p>Nieuw hier? Kies een voorbeeld via <b>Toepassingsvoorbeeld laden…</b> in de werkbalk, verander dan één waarde tegelijk en kijk naar de afpompcurve.</p>
@@ -631,6 +659,20 @@
 <li><b>Pompleidingen</b> toont elk element; het begrenzende element is gemarkeerd. <b>Pompkeuze</b> markeert de geschikte pomptypes; klik op een rij om er een te gebruiken.</li>
 <li><b>Stapsgewijze berekening</b> toont alle formules met vergelijkingsnummers. <b>Link kopiëren</b> bewaart het ontwerp in een link; <b>PDF-rapport</b> maakt een afdrukbaar rapport.</li>
 </ul>
+<h3>Gratis leesmateriaal voor studenten</h3>
+<p>Alle onderstaande bronnen zijn gratis online te lezen (in het Engels) en ruwweg gerangschikt van inleidend tot gevorderd.</p>
+<ul class="reading">
+<li><a href="https://www.leybold.com/en-us/knowledge/vacuum-fundamentals" target="_blank" rel="noopener">Leybold – Fundamentals of Vacuum Technology</a>: inleiding van gasfysica tot pompen, drukmeters en lekdetectie; ook beschikbaar als gratis e-book.</li>
+<li><a href="https://www.pfeiffervacuum.com/global/en/knowledge/vacuum-technology" target="_blank" rel="noopener">Pfeiffer Vacuum – The Vacuum Technology Book</a>: basisberekeningen (druk, gasstroming, geleiding, afpomptijd), componenten, pompen en meettechniek.</li>
+<li><a href="https://arxiv.org/abs/2006.01464" target="_blank" rel="noopener">E. Al-Dmour – Fundamentals of Vacuum Physics and Technology</a>: college van de CERN Accelerator School (2020): kinetische gastheorie, gasstroming en de belangrijkste gasbronnen in compacte vorm.</li>
+<li><a href="https://arxiv.org/abs/1404.0960" target="_blank" rel="noopener">P. Chiggiato – Vacuum Technology for Ion Sources</a>: college van de CERN Accelerator School (2014): stromingsgebieden, geleidingen, pompkeuze en een elektrische analogie voor het afpompen.</li>
+<li><a href="https://arxiv.org/abs/2105.07675" target="_blank" rel="noopener">M. Seidel – Accelerator Vacuum</a>: college van de CERN Accelerator School (2021): drukprofielen langs lange buizen – waarom veel systemen door de geleiding worden beperkt.</li>
+<li><a href="https://arxiv.org/abs/2006.07124" target="_blank" rel="noopener">P. Chiggiato – Outgassing Properties of Vacuum Materials for Particle Accelerators</a>: college van de CERN Accelerator School (2020): waarom oppervlakken gas afgeven, de rol van waterdamp en uitstoken, materiaalkeuze; achtergrond bij de 1/t-wet.</li>
+<li><a href="https://arxiv.org/abs/2006.01574" target="_blank" rel="noopener">V. Baglin – Cryopumping and Vacuum Systems</a>: college van de CERN Accelerator School (2020): vang- en cryopompen, toegepast op een groot echt systeem (LHC).</li>
+<li><a href="https://ntrs.nasa.gov/citations/20205011530" target="_blank" rel="noopener">NASA SP-8007 – Buckling of Thin-Walled Circular Cylinders (2020)</a>: NASA-ontwerprichtlijn voor schaalknik en reductiefactoren; achtergrond bij de wandsterktecontrole.</li>
+<li>Korte definities op Wikipedia: <a href="https://en.wikipedia.org/wiki/Vacuum" target="_blank" rel="noopener">Vacuum</a>, <a href="https://en.wikipedia.org/wiki/Mean_free_path" target="_blank" rel="noopener">Mean free path</a>, <a href="https://en.wikipedia.org/wiki/Knudsen_number" target="_blank" rel="noopener">Knudsen number</a>, <a href="https://en.wikipedia.org/wiki/Free_molecular_flow" target="_blank" rel="noopener">Free molecular flow</a>, <a href="https://en.wikipedia.org/wiki/Outgassing" target="_blank" rel="noopener">Outgassing</a>, <a href="https://en.wikipedia.org/wiki/Vacuum_pump" target="_blank" rel="noopener">Vacuum pump</a>, <a href="https://en.wikipedia.org/wiki/Ultra-high_vacuum" target="_blank" rel="noopener">Ultra-high vacuum</a>.</li>
+</ul>
+<p class="about-meta">De links verwijzen naar externe websites; de inhoud valt onder de verantwoordelijkheid van de auteurs.</p>
 <p class="about-meta">Drukken kunnen in Pa, mbar of Torr worden getoond; debiet en ontgassing volgen die keuze.</p>`,
       tr: `<h2 id="help-title">Vakum Haznesi Hesaplayıcısının kullanımı</h2>
 <p>Hesaplayıcıyı ilk kez mi kullanıyorsunuz? Araç çubuğundaki <b>Uygulama örneği seçin…</b> menüsünden bir örnek yükleyin; ardından değerleri teker teker değiştirerek vakuma alma eğrisindeki etkisini izleyin.</p>
@@ -658,6 +700,20 @@
 <li><b>Pompalama hatları</b> tablosunda tüm elemanlar listelenir; sınırlayıcı eleman vurgulanır. <b>Pompa seçimi</b> tablosu hedefe uygun pompa türlerini işaretler; bir türü kullanmak için ilgili satıra tıklayın.</li>
 <li><b>Adım adım hesaplama</b> bölümünde tüm formüller denklem numaralarıyla birlikte verilir. <b>Bağlantıyı kopyala</b> tasarımı bir bağlantıya kaydeder; <b>PDF raporu</b> yazdırılabilir bir rapor oluşturur.</li>
 </ul>
+<h3>Öğrenciler için ücretsiz kaynaklar</h3>
+<p>Aşağıdaki kaynakların tümü çevrimiçi olarak ücretsiz okunabilir (İngilizce) ve kabaca giriş düzeyinden ileri düzeye doğru sıralanmıştır.</p>
+<ul class="reading">
+<li><a href="https://www.leybold.com/en-us/knowledge/vacuum-fundamentals" target="_blank" rel="noopener">Leybold – Fundamentals of Vacuum Technology</a>: Gaz fiziğinden pompalara, vakum ölçerlere ve kaçak tespitine uzanan bir giriş; ücretsiz e-kitap olarak da sunulmaktadır.</li>
+<li><a href="https://www.pfeiffervacuum.com/global/en/knowledge/vacuum-technology" target="_blank" rel="noopener">Pfeiffer Vacuum – The Vacuum Technology Book</a>: Temel hesaplar (basınç, gaz akışı, iletkenlik, vakuma alma süresi), bileşenler, pompalar ve ölçüm teknikleri.</li>
+<li><a href="https://arxiv.org/abs/2006.01464" target="_blank" rel="noopener">E. Al-Dmour – Fundamentals of Vacuum Physics and Technology</a>: CERN Hızlandırıcı Okulu dersi (2020): gazların kinetik teorisi, gaz akışı ve başlıca gaz kaynakları, özlü bir anlatımla.</li>
+<li><a href="https://arxiv.org/abs/1404.0960" target="_blank" rel="noopener">P. Chiggiato – Vacuum Technology for Ion Sources</a>: CERN Hızlandırıcı Okulu dersi (2014): akış rejimleri, iletkenlikler, pompa seçimi ve vakuma alma için elektriksel benzeşim.</li>
+<li><a href="https://arxiv.org/abs/2105.07675" target="_blank" rel="noopener">M. Seidel – Accelerator Vacuum</a>: CERN Hızlandırıcı Okulu dersi (2021): uzun borular boyunca basınç dağılımı – birçok sistemin neden iletkenlikle sınırlı olduğu.</li>
+<li><a href="https://arxiv.org/abs/2006.07124" target="_blank" rel="noopener">P. Chiggiato – Outgassing Properties of Vacuum Materials for Particle Accelerators</a>: CERN Hızlandırıcı Okulu dersi (2020): yüzeylerin neden gaz saldığı, su buharının ve fırınlamanın rolü, malzeme seçimi; 1/t bağıntısının arka planı.</li>
+<li><a href="https://arxiv.org/abs/2006.01574" target="_blank" rel="noopener">V. Baglin – Cryopumping and Vacuum Systems</a>: CERN Hızlandırıcı Okulu dersi (2020): yakalayıcı ve kriyojenik pompalar ile bunların büyük ölçekli gerçek bir sisteme (LHC) uygulanması.</li>
+<li><a href="https://ntrs.nasa.gov/citations/20205011530" target="_blank" rel="noopener">NASA SP-8007 – Buckling of Thin-Walled Circular Cylinders (2020)</a>: Kabuk burkulması ve azaltma katsayıları üzerine NASA tasarım kılavuzu; cidar dayanımı hesabının arka planı.</li>
+<li>Wikipedia'da kısa tanımlar: <a href="https://en.wikipedia.org/wiki/Vacuum" target="_blank" rel="noopener">Vacuum</a>, <a href="https://en.wikipedia.org/wiki/Mean_free_path" target="_blank" rel="noopener">Mean free path</a>, <a href="https://en.wikipedia.org/wiki/Knudsen_number" target="_blank" rel="noopener">Knudsen number</a>, <a href="https://en.wikipedia.org/wiki/Free_molecular_flow" target="_blank" rel="noopener">Free molecular flow</a>, <a href="https://en.wikipedia.org/wiki/Outgassing" target="_blank" rel="noopener">Outgassing</a>, <a href="https://en.wikipedia.org/wiki/Vacuum_pump" target="_blank" rel="noopener">Vacuum pump</a>, <a href="https://en.wikipedia.org/wiki/Ultra-high_vacuum" target="_blank" rel="noopener">Ultra-high vacuum</a>.</li>
+</ul>
+<p class="about-meta">Bağlantılar harici web sitelerine yönlendirir; içeriklerinden ilgili yazarlar sorumludur.</p>
 <p class="about-meta">Basınçlar Pa, mbar ya da Torr olarak gösterilebilir; gaz akısı ve gaz salımı değerlerinin birimleri de bu seçime göre gösterilir.</p>`,
       es: `<h2 id="help-title">Cómo usar la calculadora de cámaras de vacío</h2>
 <p>¿Es nuevo? Elija un ejemplo en <b>Cargar ejemplo de aplicación…</b> de la barra de herramientas, cambie luego un valor cada vez y observe la curva de evacuación.</p>
@@ -685,6 +741,20 @@
 <li><b>Líneas de bombeo</b> lista cada elemento; el limitante aparece resaltado. <b>Selección de bombas</b> marca los tipos adecuados para el objetivo; haga clic en una fila para usarlo.</li>
 <li><b>Cálculo paso a paso</b> muestra todas las fórmulas con su número de ecuación. <b>Copiar enlace</b> guarda el diseño en un enlace; <b>Informe PDF</b> crea un informe imprimible.</li>
 </ul>
+<h3>Lecturas gratuitas para estudiantes</h3>
+<p>Todas las fuentes siguientes se pueden leer gratis en línea (en inglés) y están ordenadas, a grandes rasgos, de introductorias a avanzadas.</p>
+<ul class="reading">
+<li><a href="https://www.leybold.com/en-us/knowledge/vacuum-fundamentals" target="_blank" rel="noopener">Leybold – Fundamentals of Vacuum Technology</a>: introducción que va de la física de gases a las bombas, los medidores y la detección de fugas; también disponible como libro electrónico gratuito.</li>
+<li><a href="https://www.pfeiffervacuum.com/global/en/knowledge/vacuum-technology" target="_blank" rel="noopener">Pfeiffer Vacuum – The Vacuum Technology Book</a>: cálculos básicos (presión, flujo de gas, conductancia, tiempo de evacuación), componentes, bombas y medición.</li>
+<li><a href="https://arxiv.org/abs/2006.01464" target="_blank" rel="noopener">E. Al-Dmour – Fundamentals of Vacuum Physics and Technology</a>: clase de la CERN Accelerator School (2020): teoría cinética de los gases, flujo de gas y las principales fuentes de gas de forma compacta.</li>
+<li><a href="https://arxiv.org/abs/1404.0960" target="_blank" rel="noopener">P. Chiggiato – Vacuum Technology for Ion Sources</a>: clase de la CERN Accelerator School (2014): regímenes de flujo, conductancias, selección de bombas y una analogía eléctrica para la evacuación.</li>
+<li><a href="https://arxiv.org/abs/2105.07675" target="_blank" rel="noopener">M. Seidel – Accelerator Vacuum</a>: clase de la CERN Accelerator School (2021): perfiles de presión a lo largo de tubos largos; por qué muchos sistemas están limitados por la conductancia.</li>
+<li><a href="https://arxiv.org/abs/2006.07124" target="_blank" rel="noopener">P. Chiggiato – Outgassing Properties of Vacuum Materials for Particle Accelerators</a>: clase de la CERN Accelerator School (2020): por qué las superficies liberan gas, el papel del vapor de agua y del horneado, la elección de materiales; base de la ley 1/t.</li>
+<li><a href="https://arxiv.org/abs/2006.01574" target="_blank" rel="noopener">V. Baglin – Cryopumping and Vacuum Systems</a>: clase de la CERN Accelerator School (2020): bombas de captura y criobombas, aplicadas a un gran sistema real (LHC).</li>
+<li><a href="https://ntrs.nasa.gov/citations/20205011530" target="_blank" rel="noopener">NASA SP-8007 – Buckling of Thin-Walled Circular Cylinders (2020)</a>: guía de diseño de la NASA sobre pandeo de láminas y factores de reducción; base de la comprobación de resistencia de la pared.</li>
+<li>Definiciones breves en Wikipedia: <a href="https://en.wikipedia.org/wiki/Vacuum" target="_blank" rel="noopener">Vacuum</a>, <a href="https://en.wikipedia.org/wiki/Mean_free_path" target="_blank" rel="noopener">Mean free path</a>, <a href="https://en.wikipedia.org/wiki/Knudsen_number" target="_blank" rel="noopener">Knudsen number</a>, <a href="https://en.wikipedia.org/wiki/Free_molecular_flow" target="_blank" rel="noopener">Free molecular flow</a>, <a href="https://en.wikipedia.org/wiki/Outgassing" target="_blank" rel="noopener">Outgassing</a>, <a href="https://en.wikipedia.org/wiki/Vacuum_pump" target="_blank" rel="noopener">Vacuum pump</a>, <a href="https://en.wikipedia.org/wiki/Ultra-high_vacuum" target="_blank" rel="noopener">Ultra-high vacuum</a>.</li>
+</ul>
+<p class="about-meta">Los enlaces llevan a sitios web externos; su contenido es responsabilidad de sus autores.</p>
 <p class="about-meta">Las presiones pueden mostrarse en Pa, mbar o Torr; el caudal y la desgasificación siguen esa elección.</p>`,
     },
     notes: {

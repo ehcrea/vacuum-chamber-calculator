@@ -20,6 +20,7 @@ A free, browser-based tool for designing a vacuum chamber and its pumping system
   - Pressure-vs-time chart, time to reach the target and base pressure.
 - **Design checks**: required pumping speed, backing pump size, crossover pressure, choked flow and pump range.
 - **Wall strength**: plate stress and deflection (Roark), shell buckling (Windenburg–Trilling) and the minimum wall thickness.
+- **Free reading list for students** in the Help dialog: free vacuum handbooks (Leybold, Pfeiffer), CERN Accelerator School lectures on gas flow, outgassing and pumping, and NASA's shell-buckling guideline.
 - **Step-by-step calculation** with equation numbers, pump-line schematic, and gas, material and seal libraries.
 - **Interface**:
   - 15 application examples in four groups: book examples, lab & research (UHV, electron microscope, glovebox antechamber, conductance-limited line), industrial (coaters, furnace, space simulation, helium leak test) and hobby / maker (resin degassing, freeze dryer).
