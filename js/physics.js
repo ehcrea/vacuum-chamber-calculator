@@ -312,8 +312,12 @@
     return Math.max(pWT, pLong);
   }
 
-  /** Spherical shell buckling with a knock-down for imperfections: 0.365·E·(t/R)². */
-  const sphereBuckling = (D, t, m) => 0.365 * m.E * sq(2 * t / D);
+  /**
+   * Spherical shell buckling, lower bound 0.25·E·(t/Ro)² with Ro the outer radius (D = mean diameter).
+   * Divided by the default safety factor 4 this is the elastic allowable pressure 0.0625·E·(t/Ro)² of
+   * ASME VIII-1 UG-28(d); Roark's empirical mean value 0.365·E·(t/R)² is about 1.5× higher.
+   */
+  const sphereBuckling = (D, t, m) => 0.25 * m.E * sq(2 * t / (D + t));
 
   /** Smallest thickness meeting a check (bisection on a monotonic criterion). */
   function minThickness(ok) {

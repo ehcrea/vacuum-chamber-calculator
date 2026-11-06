@@ -87,6 +87,49 @@ check('Clamped circular plate σ = 3qa²/4t²', P.circPlate(0.4, 0.02, 1e5, ss, 
 check('Simply supported square plate β = 0.2874', P.rectPlate(1, 1, 0.01, 1e5, ss, 'simple').sigma, 0.2874 * 1e5 / 1e-4, 1e-6);
 truthy('Long-cylinder buckling is the lower bound', P.shellBuckling(0.4, 100, 0.002, ss) >= 2 * ss.E / (1 - ss.nu ** 2) * (0.002 / 0.4) ** 3 * 0.999);
 
+// ---------------------------------------------------------------------------------------------
+// Cross-checks against other sources (independent of the book)
+// Handbook values for air at 20 °C, d and l in cm, p̄ in mbar, C in L/s: Leybold "Fundamentals of
+// Vacuum Technology" §1.5; O'Hanlon "A User's Guide to Vacuum Technology" ch. 3.
+const cm2 = (d) => Math.PI * d * d / 4;
+check('Handbook: molecular orifice 11.6 L/s per cm² (Ø 10 cm)', P.elementC({ type: 'orifice', d: 0.1 }, air293, 1e-6).C * 1e3, 11.6 * cm2(10), 0.01);
+check('Handbook: choked orifice ≈ 20 L/s per cm²', air293.choke * 1e-4 * 1e3, 20, 0.01);
+check('Handbook: long tube, molecular 12.1·d³/l (Ø 2.5 cm × 100 cm)', P.elementC({ type: 'tube', d: 0.025, L: 1, entrance: false }, air293, 1e-6).C * 1e3, 12.1 * 2.5 ** 3 / 100, 0.01);
+check('Handbook: long tube, laminar 135·d⁴·p̄/l (Ø 2.5 cm × 100 cm, 10 mbar)', P.elementC({ type: 'tube', d: 0.025, L: 1, entrance: false }, air293, 1000).Cvisc * 1e3, 135 * 2.5 ** 4 * 10 / 100, 0.01);
+// Exact Clausing transmission probabilities (Clausing 1932, as tabulated by Santeler 1986) for
+// L/R = 1, 2, 10. The book's 4d/(4d + 3l) is known to be optimistic; document the bound.
+for (const [LR, exact] of [[1, 0.672], [2, 0.514], [10, 0.191]]) {
+  const K = P.elementC({ type: 'tube', d: 1, L: LR / 2 }, air293, 1e-6).K;
+  n++; const dev = K / exact - 1; const ok = dev >= 0 && dev <= 0.12; if (!ok) fails++;
+  console.log(`${ok ? 'ok  ' : 'FAIL'} Clausing L/R = ${LR}: book ${K.toFixed(3)} vs exact ${exact} (+${(dev * 100).toFixed(1)} %, documented limit 12 %)`);
+}
+// Cylinder buckling: von Mises elastic buckling pressure as written in EN 13445-3 §8.5.2.2
+// (minimum over the number of circumferential waves n), ends simply supported.
+function vonMises(Dm, L, t, m) {
+  const R = Dm / 2, Z = Math.PI * R / L;
+  let best = Infinity;
+  for (let k = 2; k < 80; k++) {
+    const eps = 1 / (k * k - 1 + Z * Z / 2) * (1 / (k * k / (Z * Z) + 1) ** 2 + t * t / (12 * R * R * (1 - m.nu ** 2)) * (k * k - 1 + Z * Z) ** 2);
+    best = Math.min(best, m.E * t * eps / R);
+  }
+  return best;
+}
+for (const [Dm, L, t] of [[0.4, 0.5, 0.004], [1, 2, 0.008], [2, 0.6, 0.012], [0.3, 0.45, 0.003], [1.2, 0.5, 0.012]]) {
+  check(`EN 13445-3 von Mises: cylinder Ø ${Dm} m × ${L} m, t ${t * 1e3} mm`, P.shellBuckling(Dm, L, t, ss), vonMises(Dm, L, t, ss), 0.06);
+}
+// Thick walls (D/t ≈ 30): Windenburg–Trilling runs up to ~15 % above von Mises, but there the hoop
+// stress at the buckling pressure is far above yield, so the yield check governs the design.
+{
+  const Dm = 0.15, L = 0.6, t = 0.005, pvm = vonMises(Dm, L, t, ss);
+  truthy(`Thick tube Ø 150 × 5 mm: yield governs (σ at p_cr = ${(pvm * Dm / (2 * t) / 1e6).toFixed(0)} MPa > Rp ${ss.Rp / 1e6} MPa)`, pvm * Dm / (2 * t) > ss.Rp);
+}
+// Sphere: with the default safety factor 4 the allowable equals ASME VIII-1 UG-28(d) in the elastic
+// range: A = 0.125/(Ro/t), B = A·E/2, Pa = B/(Ro/t) = 0.0625·E·(t/Ro)².
+{
+  const Dm = 0.5, t = 0.003, Ro = (Dm + t) / 2;
+  check('ASME UG-28(d): sphere allowable = p_cr / 4', P.sphereBuckling(Dm, t, ss) / 4, 0.0625 * ss.E * (t / Ro) ** 2, 1e-9);
+}
+
 // Presets run, belong to a menu group and pass their own design checks
 for (const p of Pr.PRESETS) {
   const r = P.analyze(p.state);

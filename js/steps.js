@@ -102,11 +102,11 @@
     const rows7 = r.struct.items.map((it) => {
       let formula;
       if (it.kind === 'shell') formula = 'p_cr = 2.42E(t/D)^2.5 / ((1−ν²)^0.75·(L/D − 0.45√(t/D)))';
-      else if (it.kind === 'sphere') formula = 'p_cr = 0.365·E·(t/R)²';
+      else if (it.kind === 'sphere') formula = 'p_cr = 0.25·E·(t/Rₒ)²';
       else if (it.kind === 'circ') formula = s.edge === 'fixed' ? 'σ = 3qa²/(4t²)' : 'σ = 3(3+ν)qa²/(8t²)';
       else formula = `σ = β·q·b²/t², β = ${fNum(it.beta, 4)}`;
       const v = it.pcr ? `p_cr = ${fNum(it.pcr / P.ATM, 1)} atm, σ = ${U.format('stress', it.sigma, { digits: 1 })}` : `σ = ${U.format('stress', it.sigma, { digits: 1 })}, y = ${U.format('length', it.y, { digits: 2 })}`;
-      return { label: t(it.name), formula, value: v, eq: it.kind === 'shell' || it.kind === 'sphere' ? 'Windenburg–Trilling' : 'Roark' };
+      return { label: t(it.name), formula, value: v, eq: it.kind === 'shell' ? 'Windenburg–Trilling' : it.kind === 'sphere' ? 'ASME UG-28(d)' : 'Roark' };
     });
     out.push({ title: t('Wall strength (not from the book)'), rows: rows7 });
     return out;

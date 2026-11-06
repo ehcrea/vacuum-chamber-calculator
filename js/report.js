@@ -342,10 +342,13 @@
     for (let i = 1; i <= pages; i++) {
       pdf.setPage(i);
       pdf.setDrawColor(...RULE); pdf.setLineWidth(0.2);
-      pdf.line(PAGE.m, PAGE.h - 11, PAGE.w - PAGE.m, PAGE.h - 11);
+      pdf.line(PAGE.m, PAGE.h - 13, PAGE.w - PAGE.m, PAGE.h - 13);
       pdf.setFont(FONT, 'normal'); pdf.setFontSize(7.5); pdf.setTextColor(...INK3);
-      pdf.text(clean(t('Vacuum Chamber Calculator · ehcrea.com · engineering estimate, verify critical designs')), PAGE.m, PAGE.h - 7);
-      pdf.text(clean(t('Page {i} of {n}', { i, n: pages })), PAGE.w - PAGE.m, PAGE.h - 7, { align: 'right' });
+      pdf.text(clean(t('Vacuum Chamber Calculator') + ' · ehcrea.com'), PAGE.m, PAGE.h - 9.5);
+      pdf.text(clean(t('Page {i} of {n}', { i, n: pages })), PAGE.w - PAGE.m, PAGE.h - 9.5, { align: 'right' });
+      pdf.setFontSize(6.3);
+      const disc = pdf.splitTextToSize(clean(t('Disclaimer: engineering estimate for concept design, not a certified calculation. Verify critical designs and have pressure-bearing parts checked to the applicable code. Use at your own risk.')), PAGE.w - 2 * PAGE.m);
+      pdf.text(disc.slice(0, 2), PAGE.m, PAGE.h - 6.5, { lineHeightFactor: 1.25 });
     }
     if (opts.blob) return pdf.output('blob');
     pdf.save(`vacuum-chamber-report-${now.toISOString().slice(0, 10)}.pdf`);
