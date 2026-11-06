@@ -884,7 +884,12 @@
     for (const a of staticNodes.attrs) a.el.setAttribute(a.attr, t(a.en));
     for (const el of document.querySelectorAll('[data-i18n-html]')) {
       const block = HTML[el.dataset.i18nHtml];
-      if (block) el.innerHTML = block[lang] || block.en; // trusted static content defined above
+      if (!block) continue;
+      let html = block[lang] || block.en; // trusted static content defined above
+      // Language pages live one folder down: point relative image paths up a level.
+      const page = document.documentElement.dataset.page;
+      if (page && page !== 'en') html = html.replace(/(src|href)="icons\//g, '$1="../icons/');
+      el.innerHTML = html;
     }
     document.documentElement.lang = lang;
     document.title = META.title[lang];
