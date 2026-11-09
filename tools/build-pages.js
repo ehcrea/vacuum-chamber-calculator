@@ -46,7 +46,7 @@ function seoBlock(l) {
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
     license: 'https://opensource.org/licenses/MIT',
     image: BASE + 'icons/og-image.png',
-    author: { '@type': 'Person', name: 'Eren Tozlu', url: 'https://erentozlu.com' },
+    author: { '@type': 'Person', name: 'E. Tozlu', url: 'https://erentozlu.com' },
     publisher: { '@type': 'Organization', name: 'ehcrea', url: 'https://ehcrea.com' },
     codeRepository: 'https://github.com/ehcrea/vacuum-chamber-calculator',
   };
