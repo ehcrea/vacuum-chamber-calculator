@@ -76,6 +76,6 @@ node tools/build-pages.js
 
 ## License
 
-MIT © 2026 Eren Tozlu. More tools at [ehcrea.com](https://ehcrea.com).
+MIT © 2026 E. Tozlu. More tools at [ehcrea.com](https://ehcrea.com).
 
 If this tool helps you, you can [support me on Patreon](https://www.patreon.com/ehcrea).
