@@ -1,5 +1,5 @@
 {
-  "id": "./",
+  "id": "/vacuum-chamber-calculator/",
   "name": "Vacuum Chamber Calculator",
   "short_name": "Vacuum",
   "description": "Design a vacuum chamber and its pumping system: gas load, conductance, pump-down time and wall strength.",
