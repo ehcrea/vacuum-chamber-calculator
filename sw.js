@@ -10,7 +10,7 @@
  *   the cache.
  */
 'use strict';
-const CACHE = "vacuum-chamber-calculator-69c8719001d0";
+const CACHE = "vacuum-chamber-calculator-aaa443d14ca5";
 const PREFIX = "vacuum-chamber-calculator-";
 const FILES = [
   "css/style.css",
